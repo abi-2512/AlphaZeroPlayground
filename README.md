@@ -11,10 +11,10 @@ Play against real AlphaZero agents in **Tic Tac Toe** and **Connect Four**, trai
 
 ## 🌐 Live Demo
 
-- **Frontend**: [https://alphazero-playground-frontend.onrender.com](https://alphazero-playground-frontend.onrender.com)  
-- **Backend API**: [https://alphazero-playground-backend.onrender.com](https://alphazero-playground-backend.onrender.com)
+- **Frontend**: [Frontend](https://alphazeroplayground-qdph.onrender.com/home.html)
+- **Backend API**: [Backend]([https://alphazero-playground-backend.onrender.com](https://alphazeroplayground-qdph.onrender.com))
 
-> ⚠️ May take ~10s on first load due to cold start and MCTS on CPU.
+> ⚠️ May take ~60s on first load due to cold start and MCTS on CPU. I highly suggest running it locally.
 
 ---
 
@@ -74,8 +74,8 @@ alphazero-playground/
 ### 📦 Backend (FastAPI)
 
 # Clone the repo
-git clone https://github.com/yourusername/alphazero-playground.git
-cd alphazero-playground/backend
+git clone https://github.com/yourusername/AlphaZeroPlayground.git
+cd AlphaZeroPlayground/backend
 
 # Install dependencies
 pip install -r requirements.txt
@@ -102,32 +102,6 @@ python -m http.server 8001
 
 > Make sure to update the JS files with correct backend URL if testing locally.
 
----
-
-## 🚀 Deployment on Render
-
-### 🧠 Backend (FastAPI)
-
-1. Create a **Web Service** on [Render](https://render.com/)
-2. Root directory: `backend`
-3. Start Command:
-
-   uvicorn main:app --host 0.0.0.0 --port 10000
-   
-4. Add `model_tic_tac_toe.pt` and `model_connect4.pt` to `backend/model/`
-5. Add any necessary environment settings (e.g. `PORT=10000`)
-
----
-
-### 🌐 Frontend (Static Site)
-
-1. Create a **Static Site** on Render
-2. Root directory: `frontend`
-3. Build command: *(leave blank)*
-4. Publish directory: `frontend`
-5. In `tictactoe.js` and `connect4.js`, change API URLs to match backend Render URL.
-
----
 
 ## ⚠️ Performance Notes
 
