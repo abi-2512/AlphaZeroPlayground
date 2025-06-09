@@ -49,7 +49,7 @@ def cached_mcts_search(game_name: str, board_key: str, player: int):
             'C': 1,
             'dirichlet_epsilon': 0,
             'dirichlet_alpha': 0.03,
-            'num_searches': 4,
+            'num_searches': 2,
         }
     else:
         game = ConnectFour()
@@ -58,7 +58,7 @@ def cached_mcts_search(game_name: str, board_key: str, player: int):
             'C': 1,
             'dirichlet_epsilon': 0,
             'dirichlet_alpha': 0.03,
-            'num_searches': 8,
+            'num_searches': 2,
         }
 
     mcts = MCTS(game, args, model)
