@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connect Four — AlphaZero</title>
+  <link rel="stylesheet" href="connect4.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  
+  
+  <main>
+    <h1>Connect Four</h1>
+    <p id="status">Loading...</p>
+    <div id="gameWrapper">
+      <div id="topRow"></div>
+      <div id="board"></div>
+    </div>
+    <button id="newGameBtn" hidden>New Game</button>
+    <a href="home.html" class="back-button">← Back to Home</a>
+  </main>
+  
+
+
+<!-- Slide-in Panel -->
+<div id="infoPanel" class="info-panel" open>
+  <div class="info-header">
+    <h2>How AlphaZero Works</h2>
+  </div>
+  <div class="info-body">
+    <p>
+      This version of AlphaZero plays Connect Four — using the same deep learning and search principles, but adapted to a more complex game.
+    </p>
+    <ul>
+      <li><strong>Neural Network:</strong> Predicts both <em>policy</em> (which column to drop into) and <em>value</em> (expected game result).</li>
+      <li><strong>Monte Carlo Tree Search:</strong> Simulates thousands of moves ahead to choose the strongest action.</li>
+      <li><strong>Self-Play:</strong> The AI trained by playing itself — no rules or strategies were hardcoded.</li>
+      <li><strong>Column Probabilities:</strong> The blue bars and percentages above each column reflect how confident the AI is that the move will lead to a win.</li>
+    </ul>
+    <p>
+      The darker the blue, the stronger the AI believes that move is. The numbers are directly from the MCTS-guided policy prediction.
+    </p>
+  </div>
+  
+</div>
+<script src="connect4.js"></script>
+</body>
+</html>

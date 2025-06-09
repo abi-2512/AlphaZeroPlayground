@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tic Tac Toe — AlphaZero</title>
+  <link rel="stylesheet" href="tictactoe.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+
+<body>
+  <main>
+    <h1>Tic Tac Toe</h1>
+    <p id="status">Loading...</p>
+    <div id="board"></div>
+    <button id="newGameBtn" hidden>New Game</button>
+    <a href="home.html" class="back-button">← Back to Home</a>
+  </main>
+  
+
+
+  <!-- Slide-in Panel -->
+  <div id="infoPanel" class="info-panel" open>
+    <div class="info-header">
+      <h2>How AlphaZero Works</h2>
+    </div>
+    <div class="info-body">
+      <p>
+        This version of AlphaZero plays Tic Tac Toe — built completely from scratch without using external libraries.
+      </p>
+      <ul>
+        <li><strong>Neural Network:</strong> Predicts <em>policy</em> (best moves) and <em>value</em> (expected winner).</li>
+        <li><strong>Monte Carlo Tree Search:</strong> Explores possible future moves, guided by the neural network.</li>
+        <li><strong>Training:</strong> The AI improves via self-play, learning entirely from experience, by playing with itself.</li>
+        <li><strong>Move Percentages:</strong> Each square may display the AI's confidence in that move (e.g. "72.3%").</li>
+      </ul>
+      <p>
+        Higher percentages mean the AI believes that move is more likely to lead to a win.
+      </p>
+    </div>
+    
+  </div>
+  <script src="tictactoe.js"></script>
+</body>
+</html>

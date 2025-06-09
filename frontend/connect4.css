@@ -1,0 +1,192 @@
+:root {
+  --bg: #f0f0f0;
+  --fg: #222;
+  --accent: #444;
+  --board-bg: #1976d2;
+  --cell-size: 70px;
+  --p1-color: #e63946;
+  --p2-color: #f1c40f;
+  --empty-color: #ffffff;
+}
+
+.gameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--board-bg);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin: 20px 0;
+  gap: 6px; /* Consistent gap between topRow and board */
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout */
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+/* Main game section */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 900px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+#status {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border-radius: 50%;
+  background: var(--empty-color);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cell.player1 {
+  background: var(--p1-color);
+}
+
+.cell.player2 {
+  background: var(--p2-color);
+}
+
+.disc {
+  width: calc(var(--cell-size) * 0.85);
+  height: calc(var(--cell-size) * 0.85);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.disc.red {
+  background: var(--p1-color);
+}
+
+.disc.yellow {
+  background: var(--p2-color);
+}
+
+.top-cell {
+  height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 30px;
+  background-color: rgba(21, 101, 192, 0.3);
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Buttons */
+button {
+  background: none;
+  border: 1px solid var(--accent);
+  padding: 8px 18px;
+  font-size: 14px;
+  color: var(--accent);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Info Panel */
+.info-panel {
+  width: 320px;
+  background-color: #f8f9fa;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-header h2 {
+  margin-top: 0;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.info-body p,
+.info-body ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+
+#gameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--board-bg);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  gap: 6px; /* Consistent space between topRow and board */
+}
+
+#topRow {
+  display: grid;
+  grid-template-columns: repeat(7, var(--cell-size));
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(7, var(--cell-size));
+  grid-template-rows: repeat(6, var(--cell-size));
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
