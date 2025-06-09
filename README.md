@@ -131,15 +131,12 @@ MIT License — use freely for learning, modification, and extension.
 
 ## 👤 Author
 
-**\Abde Abitalib Merchant**
+**Abde Abitalib Merchant**
+
 MS in Computer Science @ USC
+
 Passionate about AI, education, and building cool stuff.
 
 ---
-
-## 🌍 Let’s Connect
-
-* GitHub: [github.com/yourusername](https://github.com/yourusername)
-* LinkedIn: [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
 
 
