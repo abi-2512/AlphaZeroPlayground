@@ -38,30 +38,6 @@ This project implements a simplified version of **AlphaZero**:
 
 ---
 
-## 📁 Project Structure
-
-alphazero-playground/
-├── backend/
-│   ├── main.py              # FastAPI app
-│   └── model/
-│       ├── game.py          # Game logic (Tic Tac Toe, Connect Four)
-│       ├── network.py       # ResNet definition
-│       ├── alpha\_zero.py    # MCTS logic
-│       ├── model\_tic\_tac\_toe.pt
-│       └── model\_connect4.pt
-├── frontend/
-│   ├── index.html           # Landing page
-│   ├── tictactoe.html       # Game UI
-│   ├── connect4.html
-│   ├── tictactoe.js         # Game logic (AJAX → FastAPI)
-│   ├── connect4.js
-│   └── styles/
-├── requirements.txt
-└── README.md
-
-
----
-
 ## 🛠️ Local Setup
 
 ### ✅ Prerequisites
