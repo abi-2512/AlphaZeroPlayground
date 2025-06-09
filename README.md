@@ -12,7 +12,7 @@ Play against real AlphaZero agents in **Tic Tac Toe** and **Connect Four**, trai
 ## 🌐 Live Demo
 
 - **Frontend**: [Frontend](https://alphazeroplayground-qdph.onrender.com/home.html)
-- **Backend API**: [Backend]([https://alphazero-playground-backend.onrender.com](https://alphazeroplayground-qdph.onrender.com))
+- **Backend API**: [Backend](https://alphazeroplayground-qdph.onrender.com)
 
 > ⚠️ May take ~60s on first load due to cold start and MCTS on CPU. I highly suggest running it locally.
 
